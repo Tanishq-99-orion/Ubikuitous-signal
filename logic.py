@@ -15,6 +15,9 @@ Pipeline:
 6. Composite E3 flexibility score
 """
 
+import os
+from dotenv import load_dotenv  # This line is missing!
+
 import requests
 import xml.etree.ElementTree as ET
 
