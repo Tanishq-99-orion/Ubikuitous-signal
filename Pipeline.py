@@ -48,22 +48,14 @@ def canonicalize_linkage(l):
     return LINKAGE_CANONICAL_MAP.get(l, l)
 
 # =========================
-# LOAD BIOLOGICAL FUNCTIONS
+# IMPORT BIOLOGICAL FUNCTIONS
 # =========================
-FUNCTIONS_PATH = "/content/Functions required to predict ubiquitin linkage type.txt"
+import logic  # This refers to your logic.py file in the same folder
 
-_ns = {"__name__": "__not_main__"}
-with open(FUNCTIONS_PATH, "r", encoding="utf-8") as fh:
-    code = fh.read()
-
-# silence prints from function definitions
-with contextlib.redirect_stdout(io.StringIO()):
-    exec(compile(code, FUNCTIONS_PATH, "exec"), _ns)
-
-def get_fn(name):
-    if name not in _ns:
-        raise RuntimeError(f"Required function '{name}' not found in functions file")
-    return _ns[name]
+# Now, instead of get_fn("name"), you access functions directly from the module:
+run_pipeline = logic.run_pipeline
+# Or you can import them specifically at the top:
+# from logic import run_pipeline, get_accessible_lysines, etc.
 
 # =========================
 # IMPORT REQUIRED FUNCTIONS
