@@ -314,7 +314,7 @@ def run_pipeline(
 # =========================
 # Adjusting timeoff
 # =========================
-DEGPRED_URL = _ns["DEGPRED_URL"]
+DEGPRED_URL = logic.DEGPRED_URL
 
 # Redefine parse_degpred with an increased timeout (e.g., 60 seconds)
 def parse_degpred_with_longer_timeout(uniprot_id):
