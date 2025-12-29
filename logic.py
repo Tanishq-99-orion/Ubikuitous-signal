@@ -224,6 +224,8 @@ E3_FLEX_SCORE = round(
 # ======================================================
 # OUTPUT
 # ======================================================
+
+if __name__ == "__main__":
 print("\nE3 FLEXIBILITY SCORE (AUTONOMOUS)")
 print("================================")
 print("UniProt AC:", UNIPROT_AC)
@@ -533,6 +535,7 @@ is_multimeric = len(multimer_strings) > 0
 # =========================
 # OUTPUT
 # =========================
+if __name__ == "__main__":
 print("Reaction names containing multi-protein assemblies:\n")
 
 for m in sorted(multimer_strings):
@@ -2182,3 +2185,43 @@ if __name__ == "__main__":
         ]]
     )
 
+def run_pipeline(substrate_uniprot, e3_input, cell_state, cell_type, top_n_e2=3):
+    # 1. Resolve E3
+    e3_uniprot, e3_gene = resolve_e3_uniprot_and_gene(e3_input)
+    
+    # 2. Get E2s and score them
+    e2s = get_e2s_from_reactome() or get_e2s_from_biogrid(e3_gene)
+    top_e2s = sorted(list(e2s))[:top_n_e2]
+    
+    # 3. Analyze substrate
+    lys_cat, lys_det = get_accessible_lysines(substrate_uniprot)
+    substrate_gene = get_canonical_gene_symbol(substrate_uniprot)
+    residence = analyze_substrate(substrate_uniprot, substrate_gene)
+    
+    # 4. Infer Local DUB Activity
+    local_dub_state, local_dub_evidence = infer_local_dub_activity(substrate_uniprot, e3_uniprot)
+    
+    # 5. Biochemical Override
+    agg = {} # Aggregate scores here
+    # (Logic to aggregate scores from biochemical_linkage_override)
+    
+    # 6. Apply Temporal Gate
+    final_probs, gate_info = apply_temporal_gate_explicit(agg, cell_state)
+    dominant_linkage = max(final_probs, key=final_probs.get) if final_probs else "unknown"
+
+    # 7. IS-10: Process Inference
+    prior_files = find_prior_files()
+    priors_dict = load_priors(prior_files)
+    process_df, process_meta = map_linkage_to_process(cell_type, dominant_linkage, priors_dict)
+
+    return {
+        "linkage_probs": final_probs,
+        "dominant_linkage": dominant_linkage,
+        "process_df": process_df.to_dict(orient="records")
+    }
+
+# Helper needed by run_pipeline
+def resolve_e3_uniprot_and_gene(e3_input):
+    if e3_input.upper().startswith(("Q", "P")):
+        return e3_input, get_canonical_gene_symbol(e3_input)
+    return gene_symbol_to_uniprot(e3_input), e3_inpute
