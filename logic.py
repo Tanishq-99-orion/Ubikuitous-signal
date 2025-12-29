@@ -226,20 +226,20 @@ E3_FLEX_SCORE = round(
 # ======================================================
 
 if __name__ == "__main__":
-print("\nE3 FLEXIBILITY SCORE (AUTONOMOUS)")
-print("================================")
-print("UniProt AC:", UNIPROT_AC)
-print("UbiBrowser term:", ubibrowser_term)
-print("E3 class (UbiBrowser):", E3_CLASS)
-print("Polyubiquitination prior:", poly_prior)
-print("Protein length:", protein_length)
-print("Domain coverage:", domain_coverage)
-print("Architecture score:", architecture_score)
-print("Disorder fraction:", round(disorder_fraction, 4))
-print("pLDDT frac_low:", round(frac_low, 4))
-print("pLDDT frac_medium:", round(frac_medium, 4))
-print("pLDDT flexibility:", plddt_flex)
-print("FINAL E3_FLEX_SCORE:", E3_FLEX_SCORE)
+    print("\nE3 FLEXIBILITY SCORE (AUTONOMOUS)")
+    print("================================")
+    print("UniProt AC:", UNIPROT_AC)
+    print("UbiBrowser term:", ubibrowser_term)
+    print("E3 class (UbiBrowser):", E3_CLASS)
+    print("Polyubiquitination prior:", poly_prior)
+    print("Protein length:", protein_length)
+    print("Domain coverage:", domain_coverage)
+    print("Architecture score:", architecture_score)
+    print("Disorder fraction:", round(disorder_fraction, 4))
+    print("pLDDT frac_low:", round(frac_low, 4))
+    print("pLDDT frac_medium:", round(frac_medium, 4))
+    print("pLDDT flexibility:", plddt_flex)
+    print("FINAL E3_FLEX_SCORE:", E3_FLEX_SCORE)
 
 ###Infinity stone 2
 
@@ -536,12 +536,12 @@ is_multimeric = len(multimer_strings) > 0
 # OUTPUT
 # =========================
 if __name__ == "__main__":
-print("Reaction names containing multi-protein assemblies:\n")
-
-for m in sorted(multimer_strings):
-    print("-", m)
-
-print("\nE3 multimeric:", is_multimeric)
+    print("Reaction names containing multi-protein assemblies:\n")
+    
+    for m in sorted(multimer_strings):
+        print("-", m)
+    
+    print("\nE3 multimeric:", is_multimeric)
 
 ###infinity stone 4
 
