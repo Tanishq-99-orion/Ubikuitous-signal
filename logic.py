@@ -256,7 +256,16 @@ REACTOME_URL = (
 )
 
 BIOGRID_URL = "https://webservice.thebiogrid.org/interactions/"
-BIOGRID_ACCESS_KEY = "1ab875d99061e9ae48d022f346846e3b"
+# 1. Load the variables from your .env file into the system's memory
+load_dotenv()
+
+# 2. Retrieve the specific key using os.getenv
+# The name in quotes must exactly match what's in your .env file
+BIOGRID_ACCESS_KEY = os.getenv("BIOGRID_ACCESS_KEY")
+
+# Optional: Add a check to make sure the key was actually found
+if not BIOGRID_ACCESS_KEY:
+    print("Warning: BIOGRID_ACCESS_KEY not found in environment variables.")
 
 # =========================
 # STEP 0: Gene symbol → UniProt accession
