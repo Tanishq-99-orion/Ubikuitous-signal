@@ -1,4 +1,3 @@
-# infinity_stone_1.py
 import requests
 import xml.etree.ElementTree as ET
 
@@ -6,11 +5,15 @@ HEADERS_JSON = {"Accept": "application/json"}
 
 E3_POLYUB_SCORE = {
     "BTB_3": 0.85,
+    "BTB_OTHER": 0.80,
+    "CDC20": 0.90,
+    "DWD": 0.80,
     "F-box": 0.85,
+    "SOCS_VHL_BC-box": 0.80,
     "HECT": 0.45,
     "RING": 0.35,
     "UBOX": 0.30,
-    "SINGLE_OTHER": 0.25,
+    "SINGLE_OTHER": 0.25
 }
 
 def get_ubibrowser_term_from_uniprot(uniprot_ac):
@@ -24,9 +27,9 @@ def get_ubibrowser_term_from_uniprot(uniprot_ac):
 
     genes = data.get("genes", [])
     if genes:
-        gene = genes[0].get("geneName", {}).get("value")
-        if gene:
-            return f"{gene}_HUMAN"
+        g = genes[0].get("geneName", {}).get("value")
+        if g:
+            return f"{g}_HUMAN"
 
     entry = data.get("uniProtkbId")
     if entry and entry.endswith("_HUMAN"):
@@ -45,9 +48,9 @@ def get_e3_class_from_ubibrowser(term):
     root = ET.fromstring(r.text)
     counts = {}
 
-    for inter in root.findall(".//Interaction"):
-        if inter.findtext("species") == "H.sapiens":
-            etype = inter.findtext("enzyme_type")
+    for it in root.findall(".//Interaction"):
+        if it.findtext("species") == "H.sapiens":
+            etype = it.findtext("enzyme_type")
             if etype:
                 counts[etype] = counts.get(etype, 0) + 1
 
