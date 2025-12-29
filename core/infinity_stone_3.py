@@ -1,34 +1,16 @@
-# infinity_stone_3.py
 import requests
 import re
 
-def is_multimeric_e3(uniprot_id):
-   url = (
-    f"https://reactome.org/ContentService/data/mapping/UniProt/"
-    f"{UNIPROT_ID}/reactions?species={SPECIES}"
+def is_multimeric_e3(uniprot_ac):
+    url = (
+        "https://reactome.org/ContentService/data/mapping/UniProt/"
+        f"{uniprot_ac}/reactions?species=9606"
     )
-    response = requests.get(url, headers={"accept": "application/json"})
-    response.raise_for_status()
-    data = response.json()
+    r = requests.get(url, headers={"accept": "application/json"}, timeout=20)
+    r.raise_for_status()
 
-    multimer_strings = set()
-    # Pattern:
-    # - contains ':' → interaction / complex
-    # - excludes gene names without modifiers
-    pattern = re.compile(r"\S+:\S+")
-    
-    for entry in data:
+    for entry in r.json():
         for name in entry.get("name", []):
-            matches = pattern.findall(name)
-            for m in matches:
-                multimer_strings.add(m)
-
-    is_multimeric = len(multimer_strings) > 0
-
-    print("Reaction names containing multi-protein assemblies:\n")
-
-    for m in sorted(multimer_strings):
-        print("-", m)
-    
-    print("\nE3 multimeric:", is_multimeric)
+            if ":" in name:
+                return True
     return False
