@@ -1,0 +1,17 @@
+# Web Server and API
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Database and Caching
+redis
+
+# Data Processing and Science
+pandas
+requests
+beautifulsoup4
+lxml
+pgmpy
+
+# Progress bars and Utilities
+tqdm
