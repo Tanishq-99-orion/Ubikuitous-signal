@@ -1,0 +1,16 @@
+Cell_Type,Process,Prior,Weighted_Hits,Raw_Hits,Coverage,Confidence,Process_Size
+Blood and immune cells,autophagy,0.0264,16.0,16,0.026,0.123,608
+Germ cells,autophagy,0.0346,21.0,21,0.035,0.159,608
+Trophoblast cells,autophagy,0.0033,2.0,2,0.003,0.016,608
+Muscle cells,autophagy,0.0033,2.0,2,0.003,0.016,608
+Ciliated cells,autophagy,0.0033,2.0,2,0.003,0.016,608
+Specialized epithelial cells,autophagy,0.0132,8.0,8,0.013,0.064,608
+Squamous epithelial cells,autophagy,0.0,0.0,0,0.0,0.0,608
+Glial cells,autophagy,0.0033,2.0,2,0.003,0.016,608
+Pigment cells,autophagy,0.0,0.0,0,0.0,0.0,608
+Glandular epithelial cells,autophagy,0.0,0.0,0,0.0,0.0,608
+Neuronal cells,autophagy,0.0017,1.0,1,0.002,0.008,608
+Endothelial and mural cells,autophagy,0.0017,1.0,1,0.002,0.008,608
+Mesenchymal cells,autophagy,0.0,0.0,0,0.0,0.0,608
+Stem and proliferating cells,autophagy,0.0,0.0,0,0.0,0.0,608
+Endocrine cells,autophagy,0.0,0.0,0,0.0,0.0,608

@@ -1,0 +1,16 @@
+Cell_Type,Process,Prior,Weighted_Hits,Raw_Hits,Coverage,Confidence,Process_Size
+Blood and immune cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Germ cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Trophoblast cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Muscle cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Ciliated cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Specialized epithelial cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Squamous epithelial cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Glial cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Pigment cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Glandular epithelial cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Neuronal cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Endothelial and mural cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Mesenchymal cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Stem and proliferating cells,escrt,0.0015,0.0,0,0.0,0.0,33
+Endocrine cells,escrt,0.0015,0.0,0,0.0,0.0,33

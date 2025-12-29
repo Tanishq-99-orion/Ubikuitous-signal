@@ -1,0 +1,16 @@
+Cell_Type,Process,Prior,Weighted_Hits,Raw_Hits,Coverage,Confidence,Process_Size
+Blood and immune cells,proteasome,0.0164,11.0,11,0.016,0.079,672
+Germ cells,proteasome,0.076,51.0,51,0.076,0.316,672
+Trophoblast cells,proteasome,0.0016,1.0,1,0.001,0.007,672
+Muscle cells,proteasome,0.0045,3.0,3,0.004,0.022,672
+Ciliated cells,proteasome,0.006,4.0,4,0.006,0.029,672
+Specialized epithelial cells,proteasome,0.009,6.0,6,0.009,0.044,672
+Squamous epithelial cells,proteasome,0.0001,0.0,0,0.0,0.0,672
+Glial cells,proteasome,0.0031,2.0,2,0.003,0.015,672
+Pigment cells,proteasome,0.0001,0.0,0,0.0,0.0,672
+Glandular epithelial cells,proteasome,0.0031,2.0,2,0.003,0.015,672
+Neuronal cells,proteasome,0.0016,1.0,1,0.001,0.007,672
+Endothelial and mural cells,proteasome,0.0016,1.0,1,0.001,0.007,672
+Mesenchymal cells,proteasome,0.0031,2.0,2,0.003,0.015,672
+Stem and proliferating cells,proteasome,0.0001,0.0,0,0.0,0.0,672
+Endocrine cells,proteasome,0.0001,0.0,0,0.0,0.0,672

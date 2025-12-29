@@ -1,0 +1,16 @@
+Cell_Type,Process,Prior,Weighted_Hits,Raw_Hits,Coverage,Confidence,Process_Size
+Blood and immune cells,deubiquitination,0.0154,2.0,2,0.015,0.073,132
+Germ cells,deubiquitination,0.0684,9.0,9,0.068,0.289,132
+Trophoblast cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Muscle cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Ciliated cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Specialized epithelial cells,deubiquitination,0.0154,2.0,2,0.015,0.073,132
+Squamous epithelial cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Glial cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Pigment cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Glandular epithelial cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Neuronal cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Endothelial and mural cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Mesenchymal cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Stem and proliferating cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132
+Endocrine cells,deubiquitination,0.0002,0.0,0,0.0,0.0,132

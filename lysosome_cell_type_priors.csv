@@ -1,0 +1,16 @@
+Cell_Type,Process,Prior,Weighted_Hits,Raw_Hits,Coverage,Confidence,Process_Size
+Blood and immune cells,lysosome,0.0394,36.0,36,0.039,0.179,915
+Germ cells,lysosome,0.0164,15.0,15,0.016,0.079,915
+Trophoblast cells,lysosome,0.0022,2.0,2,0.002,0.011,915
+Muscle cells,lysosome,0.0011,1.0,1,0.001,0.005,915
+Ciliated cells,lysosome,0.0011,1.0,1,0.001,0.005,915
+Specialized epithelial cells,lysosome,0.0186,17.0,17,0.019,0.089,915
+Squamous epithelial cells,lysosome,0.0,0.0,0,0.0,0.0,915
+Glial cells,lysosome,0.0066,6.0,6,0.007,0.032,915
+Pigment cells,lysosome,0.0044,4.0,4,0.004,0.022,915
+Glandular epithelial cells,lysosome,0.0077,7.0,7,0.008,0.038,915
+Neuronal cells,lysosome,0.0,0.0,0,0.0,0.0,915
+Endothelial and mural cells,lysosome,0.0033,3.0,3,0.003,0.016,915
+Mesenchymal cells,lysosome,0.0022,2.0,2,0.002,0.011,915
+Stem and proliferating cells,lysosome,0.0011,1.0,1,0.001,0.005,915
+Endocrine cells,lysosome,0.0011,1.0,1,0.001,0.005,915
