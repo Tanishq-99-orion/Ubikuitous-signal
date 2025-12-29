@@ -80,8 +80,7 @@ find_prior_files = get_fn("find_prior_files")
 load_priors = get_fn("load_priors")
 CELL_TYPE_CHOICES = get_fn("CELL_TYPE_CHOICES")
 
-E3_POLYUB_SCORE = _ns.get("E3_POLYUB_SCORE", {})
-
+E3_POLYUB_SCORE = getattr(logic, "E3_POLYUB_SCORE", {})
 # =========================
 # HELPERS
 # =========================
