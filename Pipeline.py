@@ -10,19 +10,6 @@ import pandas as pd
 import contextlib
 import io
 
-from dotenv import load_dotenv
-
-# 1. Load the variables from your .env file into the system's memory
-load_dotenv()
-
-# 2. Retrieve the specific key using os.getenv
-# The name in quotes must exactly match what's in your .env file
-BIOGRID_ACCESS_KEY = os.getenv("BIOGRID_ACCESS_KEY")
-
-# Optional: Add a check to make sure the key was actually found
-if not BIOGRID_ACCESS_KEY:
-    print("Warning: BIOGRID_ACCESS_KEY not found in environment variables.")
-
 from fastapi import FastAPI
 # Import your functions from the other file
 # (Replace 'logic' with whatever you named your functions file)
