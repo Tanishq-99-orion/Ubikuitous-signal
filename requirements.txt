@@ -1,7 +1,6 @@
 # Web Server and API
 fastapi
 uvicorn[standard]
-python-dotenv
 
 # Database and Caching
 redis
