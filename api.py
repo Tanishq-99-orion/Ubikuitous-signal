@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import traceback
 
 # import your pipeline function
-from pipeline import run_pipeline
+from Pipeline import run_pipeline
 
 app = FastAPI(
     title="Ubiquitin Linkage & Process Inference API",
